@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.6278932, b: 0, a: 1}
+  m_Color: {r: 0.8962264, g: 0.53266287, b: 0.7828229, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1938,10 +1938,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadScene: GameScene
-  qualityDropdown: {fileID: 0}
-  fullscreenToggle: {fileID: 0}
+  qualityDropdown: {fileID: 6041518533392275227}
+  fullscreenToggle: {fileID: 6041518532836160347}
   IWantToDisableThis: {fileID: 0}
-  resolution: {fileID: 0}
+  resolution: {fileID: 6041518534081561139}
 --- !u!1 &6041518533859733730
 GameObject:
   m_ObjectHideFlags: 0
