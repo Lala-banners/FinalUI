@@ -6,18 +6,21 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     #region Public variables
-    public string LoadScene = "Game";
+    public string LoadScene = "GameScene";
     public Dropdown qualityDropdown;
     public Toggle fullscreenToggle;
     public GameObject IWantToDisableThis;
     public AudioMixer mixer;
     public Slider musicSlider;
     public Slider SFXSlider;
+    
     #endregion
     
     public void Start()
     {
-        SceneManager.LoadScene(LoadScene);
+
+       
+        
 
         LoadPlayerPrefs();
 
@@ -49,7 +52,12 @@ public class MainMenu : MonoBehaviour
         }
         PlayerPrefs.Save();
     }
-   
+
+    public void ChangeScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
     #region Change settings 
     //This changes the screen from fullscreen to windowed
     public void SetFullScreen(bool fullscreen)
