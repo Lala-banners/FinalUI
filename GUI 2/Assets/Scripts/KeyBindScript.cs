@@ -61,6 +61,8 @@ public class KeyBindScript : MonoBehaviour
         }
     }
 
+     
+    #region Method to set up new keys 
     private void OnGUI()
     {
         string newKey = "";
@@ -95,6 +97,10 @@ public class KeyBindScript : MonoBehaviour
             }
         }
     }
+    #endregion
+
+
+    #region Method to change keys to whatever we want
     public void ChangeKey(GameObject clickKey)
     {
         currentKey = clickKey;
@@ -103,6 +109,9 @@ public class KeyBindScript : MonoBehaviour
             currentKey.GetComponent<Image>().color = selectedKey;
         }
     }
+    #endregion
+
+    #region To Save keys when we change them
     public void SaveKeys()
     {
         foreach(var key in keys)
@@ -111,4 +120,5 @@ public class KeyBindScript : MonoBehaviour
         }
         PlayerPrefs.Save();
     }
+    #endregion
 }

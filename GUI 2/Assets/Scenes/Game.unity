@@ -1174,6 +1174,8 @@ MonoBehaviour:
   speed: 12
   gravity: -9.81
   mouseSensitivity: 100
+  level: 1
+  health: 55
 --- !u!1 &431731416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7762724536342527972, guid: 7d48defa37b741a43866bfa33ec60536,
@@ -1580,7 +1582,6 @@ MonoBehaviour:
   LoadScene: 1
   qualityDropdown: {fileID: 2332379978135309692}
   fullscreenToggle: {fileID: 2332379979731949630}
-  IWantToDisableThis: {fileID: 0}
   mixer: {fileID: 24100000, guid: 54da41e50bc912a4cac7b9bbf38625ab, type: 2}
   musicSlider: {fileID: 2332379979065966022}
   SFXSlider: {fileID: 2332379978459498416}
@@ -2471,7 +2472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &890958619
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4594,25 +4595,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2332379978135309693}
   m_CullTransparentMesh: 0
---- !u!114 &2332379978135309689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2332379978135309693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f588d1f4b570084fbbb76dac4accdb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadScene: GameScene
-  qualityDropdown: {fileID: 2332379978135309692}
-  fullscreenToggle: {fileID: 2332379979731949630}
-  IWantToDisableThis: {fileID: 0}
-  mixer: {fileID: 0}
-  musicSlider: {fileID: 0}
-  SFXSlider: {fileID: 0}
 --- !u!114 &2332379978135309690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,7 +4727,6 @@ GameObject:
   - component: {fileID: 2332379978135309688}
   - component: {fileID: 2332379978135309690}
   - component: {fileID: 2332379978135309692}
-  - component: {fileID: 2332379978135309689}
   m_Layer: 5
   m_Name: Quality Settings
   m_TagString: Untagged
@@ -5088,25 +5069,6 @@ RectTransform:
   m_AnchoredPosition: {x: -44.684, y: -99.974}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2332379978302146856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2332379978302146857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f588d1f4b570084fbbb76dac4accdb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadScene: GameScene
-  qualityDropdown: {fileID: 2332379978135309692}
-  fullscreenToggle: {fileID: 2332379979731949630}
-  IWantToDisableThis: {fileID: 0}
-  mixer: {fileID: 24100000, guid: 54da41e50bc912a4cac7b9bbf38625ab, type: 2}
-  musicSlider: {fileID: 2332379979065966022}
-  SFXSlider: {fileID: 2332379978459498416}
 --- !u!1 &2332379978302146857
 GameObject:
   m_ObjectHideFlags: 0
@@ -5116,7 +5078,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2332379978302146839}
-  - component: {fileID: 2332379978302146856}
   m_Layer: 5
   m_Name: Options Menu
   m_TagString: Untagged
@@ -5172,7 +5133,6 @@ GameObject:
   - component: {fileID: 2332379978387290443}
   - component: {fileID: 2332379978387290444}
   - component: {fileID: 2332379978387290445}
-  - component: {fileID: 2332379978387290446}
   m_Layer: 0
   m_Name: Resolution Dropdown
   m_TagString: Untagged
@@ -5273,7 +5233,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 637735772}
         m_MethodName: SetResolution
         m_Mode: 0
         m_Arguments:
@@ -5285,25 +5245,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_AlphaFadeSpeed: 0.15
---- !u!114 &2332379978387290446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2332379978387290432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f588d1f4b570084fbbb76dac4accdb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadScene: GameScene
-  qualityDropdown: {fileID: 0}
-  fullscreenToggle: {fileID: 0}
-  IWantToDisableThis: {fileID: 0}
-  mixer: {fileID: 0}
-  musicSlider: {fileID: 0}
-  SFXSlider: {fileID: 0}
 --- !u!224 &2332379978387290447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7394,25 +7335,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2332379979731949628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2332379979731949631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f588d1f4b570084fbbb76dac4accdb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadScene: GameScene
-  qualityDropdown: {fileID: 0}
-  fullscreenToggle: {fileID: 0}
-  IWantToDisableThis: {fileID: 0}
-  mixer: {fileID: 0}
-  musicSlider: {fileID: 0}
-  SFXSlider: {fileID: 0}
 --- !u!224 &2332379979731949629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7480,7 +7402,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 637735769}
         m_MethodName: SetFullScreen
         m_Mode: 0
         m_Arguments:
@@ -7502,7 +7424,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2332379979731949629}
   - component: {fileID: 2332379979731949630}
-  - component: {fileID: 2332379979731949628}
   m_Layer: 0
   m_Name: Fullscreen Toggle
   m_TagString: Untagged

@@ -17,11 +17,17 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 100f;
     private float xRotation = 0f;
     Camera camera;
+
+    //player stats
+    public int level = 1;
+    public float health = 55;
+ 
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         camera = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
@@ -47,6 +53,26 @@ public class PlayerController : MonoBehaviour
         Vector3 move = (transform.right * x) + (transform.forward * z);
         velocity.y += gravity * Time.deltaTime;
         controller.Move((velocity + move) * speed * Time.deltaTime);
+    }
+
+    public void Save()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+
+    public void Load()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        level = data.level;
+        health = data.health;
+     
+        Vector3 pos = new Vector3(data.position[0],
+                data.position[1],
+                data.position[2]);
+
+        transform.position = pos;
     }
 }
 

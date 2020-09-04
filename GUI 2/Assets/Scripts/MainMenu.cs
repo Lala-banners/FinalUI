@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour
     public string LoadScene = "GameScene";
     public Dropdown qualityDropdown;
     public Toggle fullscreenToggle;
-    public GameObject IWantToDisableThis;
     public AudioMixer mixer;
     public Slider musicSlider;
     public Slider SFXSlider;
@@ -18,10 +17,6 @@ public class MainMenu : MonoBehaviour
     
     public void Start()
     {
-
-       
-        
-
         LoadPlayerPrefs();
 
         Debug.Log("Starting Game Main Menu");
@@ -53,6 +48,15 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Quitting Game");
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#endif
+        Application.Quit();
+    }
+
     public void ChangeScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
@@ -77,14 +81,7 @@ public class MainMenu : MonoBehaviour
         mixer.SetFloat("SFXVol", value);
     }
     #endregion
-    public void QuitGame()
-    {
-        Debug.Log("Quitting Game");
-#if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-#endif
-        Application.Quit();
-    }
+  
     #region Save and load player prefs
     public void SavePlayerPrefs()
     {
